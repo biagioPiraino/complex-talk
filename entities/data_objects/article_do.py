@@ -30,3 +30,7 @@ class ArticleDo:
       "create_article", 
       (article.Category, article.Title, article.Content))
     self.conn.commit()
+
+  def GetLatestArticle(self):
+    self.cursor.callproc("get_latest_article")
+    return self.cursor.fetchone()

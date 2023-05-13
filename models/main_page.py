@@ -1,11 +1,13 @@
 from entities.article import Article
+from services.article_service import ArticleService
 
 class MainPageModel:
   def __init__(self) -> None:
     pass
 
   def GetMainArticle(self) -> Article:
-      return None
+    article_service = ArticleService()
+    return article_service.GetLatestArticle()
 
   def GetArticlesToDisplay(self) -> list:
-      return None
+    return list()

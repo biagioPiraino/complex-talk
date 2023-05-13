@@ -25,3 +25,17 @@ BEGIN
     );
 END;
 $$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION get_latest_article()
+RETURNS TABLE (
+  id INT,
+  created_at TIMESTAMP,
+  category TEXT,
+  title TEXT,
+  content TEXT
+)
+AS $$
+BEGIN
+  RETURN QUERY SELECT * FROM articles ORDER BY created_at DESC LIMIT 1;
+END;
+$$ LANGUAGE plpgsql;
