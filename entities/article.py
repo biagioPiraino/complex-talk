@@ -1,9 +1,9 @@
 from datetime import datetime
-from enums.category import Category
+from enum import Enum
 
 class Article:
   Id:int
   Created:datetime
-  Category:Category
+  Category:Enum
   Title:str
   Content:str

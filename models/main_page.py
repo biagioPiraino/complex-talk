@@ -7,5 +7,5 @@ class MainPageModel:
   def GetMainArticle(self) -> Article:
       return None
 
-  def GetArticlesToDisplay(self) -> list(Article):
+  def GetArticlesToDisplay(self) -> list:
       return None
