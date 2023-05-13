@@ -1,0 +1,38 @@
+{% extends 'shared/_layout.html' %}
+
+{% block main %}
+
+<form method="post">
+  <div class="form-group mb-4">
+    <label class="mb-1" for="articleTitle">Title</label>
+    <input 
+      type="text" class="form-control mb-1" id="articleTitle" name="article-title"
+      aria-describedby="articleTitle" value="{{ request.form['title'] }}" placeholder="Enter a Title">
+    <small id="articleBoost" class="form-text text-muted">Make It Unique.</small>
+  </div>
+
+  <div class="form-group mb-4">
+    <label class="mb-1" for="articleCategory">Category</label>
+    <select name="article-category" class="form-select" id="articleCategory">
+      <option value="1">Tech</option>
+      <option value="2">Business</option>
+      <option value="3">World</option>
+      <option value="4">Lifestyle</option>
+    </select>
+  </div>
+
+  <label class="mb-1">Content</label>
+  <div class="form-floating mb-4">
+    <textarea
+      name="article-content"
+      id="articleContent" 
+      class="form-control" 
+      placeholder="Leave a comment here"  
+      style="height: 200px">{{request.form['content']}}</textarea>
+    <label for="articleContent">What's new?</label>
+  </div>
+
+  <button type="submit" class="btn btn-outline-dark">Post It!</button>
+</form>
+
+{% endblock main %}
