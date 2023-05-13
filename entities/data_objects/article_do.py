@@ -34,3 +34,7 @@ class ArticleDo:
   def GetLatestArticle(self):
     self.cursor.callproc("get_latest_article")
     return self.cursor.fetchone()
+  
+  def GetLatestArticleByCategory(self, category: str):
+    self.cursor.callproc("get_latest_article_by_category", [category])
+    return self.cursor.fetchone()

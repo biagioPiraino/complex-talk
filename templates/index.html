@@ -16,10 +16,10 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">{{article['category']}}</strong>
-          <h3 class="mb-1">{{article['title']}}</h3>
-          <div class="mb-2 text-muted">{{article['added']}}</div>
-          <p class="card-text mb-2">{{ article['short_description']}}</p>
+          <strong class="d-inline-block mb-2 text-primary">{{article['DisplayCategory']}}</strong>
+          <h3 class="mb-1">{{article['Title']}}</h3>
+          <div class="mb-2 text-muted">{{article['DisplayCreated']}}</div>
+          <p class="card-text mb-2">{{ article['Content'][0:50]}}...</p>
           <a href="#" class="stretched-link">Continue reading</a>
         </div>
       </div>

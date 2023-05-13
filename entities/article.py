@@ -3,6 +3,7 @@ from datetime import datetime
 class Article:
   Id:int
   Created:datetime
+  DisplayCreated:str
   Category:str
   DisplayCategory:str
   Title:str
