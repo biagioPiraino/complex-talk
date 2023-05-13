@@ -7,7 +7,7 @@ class ArticleDo:
     self.host     = os.environ.get("HOST")
     self.port     = os.environ.get("PORT")
     self.dbname   = os.environ.get("DB_NAME")
-    self.user     = os.environ.get("USER")
+    self.user     = os.environ.get("DB_USER")
     self.password = os.environ.get("PASSWORD")
 
   def __enter__(self):

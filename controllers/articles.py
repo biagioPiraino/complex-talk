@@ -8,6 +8,6 @@ def create_article():
   if request.method == 'POST':
     model = CreateArticleModel()
     model.CreateArticle(request.form)
-    return redirect(url_for("index.html"))
+    return redirect(url_for("index"))
 
   return render_template("create_article.html")
