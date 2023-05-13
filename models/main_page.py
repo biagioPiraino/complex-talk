@@ -1,9 +1,11 @@
+from entities.article import Article
+
 class MainPageModel:
   def __init__(self) -> None:
     pass
 
-  def GetMainArticle(self):
+  def GetMainArticle(self) -> Article:
       return None
 
-  def GetArticlesToDisplay(self):
+  def GetArticlesToDisplay(self) -> list(Article):
       return None
