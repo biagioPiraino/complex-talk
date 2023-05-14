@@ -1,4 +1,3 @@
-from entities.article import Article
 from services.article_service import ArticleService
 
 class ArticlesCategoryModel:
