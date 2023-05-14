@@ -27,6 +27,20 @@ class ArticleService:
 
     if query_result != None:
       return self.BuildArticle(query_result)
+    
+  def GetArticlesByCategory(self, category: str) -> list:
+    articles_to_return = []
+    query_result = []
+  
+    with ArticleDo() as data_object:
+      query_result = data_object.GetArticlesByCategory(category)
+
+    if query_result != None:
+      for result in query_result:
+        if result != None:
+          articles_to_return.append(self.BuildArticle(result))
+    
+    return articles_to_return
   
   def BuildArticle(self, query_result) -> Article:
     date_format = os.environ.get('DATE_FORMAT')

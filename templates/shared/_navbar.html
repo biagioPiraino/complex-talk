@@ -9,7 +9,7 @@
     
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <li><a href="{{ url_for('index')}}" class="nav-link px-2 link-dark">Home</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Categories</a></li>
+      <li><a href="{{ url_for('articles.articles_categories')}}" class="nav-link px-2 link-dark">Categories</a></li>
       <li><a href="{{ url_for('articles.create_article')}}" class="nav-link px-2 link-dark">Post</a></li>
     </ul>
 
