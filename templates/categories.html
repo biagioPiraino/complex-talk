@@ -1,0 +1,49 @@
+{% extends 'shared/_layout.html' %}
+
+{% block main %}
+
+<div class="row mb-2 pt-3">
+
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <a href="{{ url_for('articles.articles_category', category=1)}}">
+          <strong class="d-inline-block mb-2 text-primary">Tech</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <a href="{{ url_for('articles.articles_category', category=2)}}">
+          <strong class="d-inline-block mb-2 text-primary">Business</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <a href="{{ url_for('articles.articles_category', category=3)}}">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <a href="{{ url_for('articles.articles_category', category=4)}}">
+          <strong class="d-inline-block mb-2 text-primary">Lifestyle</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock main %}
