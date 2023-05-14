@@ -8,11 +8,11 @@
     <div class="col-md-12">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">{{article['DisplayCategory']}}</strong>
+          <strong class="d-inline-block mb-2 text-secondary">{{article['DisplayCategory']}}</strong>
           <h3 class="mb-1">{{article['Title']}}</h3>
           <div class="mb-2 text-muted">{{article['DisplayCreated']}}</div>
           <p class="card-text mb-2">{{ article['Content'][0:50]}}...</p>
-          <a href="#" class="stretched-link">Continue reading</a>
+          <a href="{{url_for('articles.article', article_id=article['Id'])}}" class="stretched-link text-secondary">Continue reading</a>
         </div>
       </div>
     </div>

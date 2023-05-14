@@ -1,0 +1,20 @@
+{% extends 'shared/_layout.html' %}
+
+{% block main %}
+
+<div class="row mb-2 pt-3">
+  
+  <div class="col-md-12">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-secondary">{{article['DisplayCategory']}}</strong>
+        <h3 class="mb-1">{{article['Title']}}</h3>
+        <div class="mb-2 text-muted">{{article['DisplayCreated']}}</div>
+        <p class="card-text mb-2">{{ article['Content']}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock main %}

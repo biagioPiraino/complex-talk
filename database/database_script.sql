@@ -77,3 +77,21 @@ BEGIN
     ORDER BY created_at DESC;
 END;
 $$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION get_article_by_id(
+    id_filter INT
+)
+RETURNS TABLE (
+  id INT,
+  created_at TIMESTAMP,
+  category TEXT,
+  title TEXT,
+  content TEXT
+)
+AS $$
+BEGIN
+  RETURN QUERY 
+    SELECT * FROM articles 
+    WHERE articles.id=id_filter;
+END;
+$$ LANGUAGE plpgsql;
