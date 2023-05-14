@@ -42,3 +42,7 @@ class ArticleDo:
   def GetArticlesByCategory(self, category: str):
     self.cursor.callproc("get_articles_by_category", [category])
     return self.cursor.fetchall()
+  
+  def GetArticle(self, id: int):
+    self.cursor.callproc("get_article_by_id", [id])
+    return self.cursor.fetchone()

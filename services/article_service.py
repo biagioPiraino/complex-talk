@@ -42,6 +42,14 @@ class ArticleService:
     
     return articles_to_return
   
+  def GetArticle(self, id: int) -> Article:
+    query_result = []
+    
+    with ArticleDo() as data_object:
+      query_result = data_object.GetArticle(id)
+
+    return self.BuildArticle(query_result)
+  
   def BuildArticle(self, query_result) -> Article:
     date_format = os.environ.get('DATE_FORMAT')
 
