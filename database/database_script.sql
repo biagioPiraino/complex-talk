@@ -58,3 +58,22 @@ BEGIN
     ORDER BY created_at DESC LIMIT 1;
 END;
 $$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION get_articles_by_category(
+    category_filter TEXT
+)
+RETURNS TABLE (
+  id INT,
+  created_at TIMESTAMP,
+  category TEXT,
+  title TEXT,
+  content TEXT
+)
+AS $$
+BEGIN
+  RETURN QUERY 
+    SELECT * FROM articles 
+    WHERE articles.category=category_filter 
+    ORDER BY created_at DESC;
+END;
+$$ LANGUAGE plpgsql;
